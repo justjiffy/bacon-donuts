@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Bacon Donut Shop - The bacon-ist donuts known to exist!</title>
+<link rel="stylesheet" type="text/css" href="style2.css" />
+<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.1.js"></script>
+
+	<script type="text/javascript" src="../../Downloads/bacon_donut_shop/js/main.js"></script>
+	<script type="text/javascript" src="../../Downloads/bacon_donut_shop/js/easing.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Delius+Unicase:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=League+Script' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body class="bg">
+<div id="main">
+<h1 class="titles">Bacon Donut Shop</h1>
+<p class="titlesSmall Bk">I am editing this persons file to see if I can add hover animations to the bacon donut images.</p>
+
+<p class="titlesSmall Bk">Bacon ipsum dolor amet ground round flank pork belly shoulder sausage drumstick turducken alcatra pig pork bresaola prosciutto doner beef ribs ball tip. Bacon flank prosciutto bresaola brisket drumstick. Filet mignon sausage hamburger drumstick chuck strip steak pork chop swine spare ribs jowl. Tri-tip boudin pork loin tail filet mignon, rump pork chop bacon pork shank beef ribs brisket hamburger jerky sirloin. Ham porchetta short loin, pork loin swine pancetta pork chop shankle tenderloin biltong shank. Short loin cupim pork loin porchetta. Shank pig meatloaf chicken, tri-tip biltong jerky corned beef salami prosciutto ribeye flank pancetta pork belly.</p>
+<ul>
+<li><img src="images/TEST.jpg" title="MMM A DONUT!" /></li>
+<li><img src="images/maple_bacon_donut.jpg" title="Bacon Donuts"  /></li>
+<li><img src="images/glazed_bacon_donut.jpg" title="Glazed Bacon"  /></li>
+
+<li><img src="images/glazed_bacon_donut.jpg" title="I need water..."  /></li>
+<li><img src="images/maple_bacon_donut.jpg" title="20 dozen plz"  /></li>
+<li><img src="images/TEST.jpg" title="Gimme More" /></li>
+</ul>
+
+<!--pop-ups-->
+
+<div class="messagepop pop">
+    <h1 id="new_message">
+        ABOUT THIS DONUT</h1>
+        <p>Message message message about the donut. More more more more info about the big 'ol bacon donut. Weeee!</p>
+    <a class="close" href="/"><p>Cancel</p></a>
+</div>
+
+<div id="contact">[INSERT DONUT IMAGE]</div>
+
+</div>
+
+<!--script-->
+
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){									
+		var thumbs = $("ul li img");		
+		
+		for (var i = 0, ii = thumbs.length; i < ii; i++){
+			if (thumbs[i].title && thumbs[i].title.length > 0)
+			{			
+				var imgtitle = thumbs[i].title;		
+				$(thumbs[i]).wrap('<div class="wrapper" />').				
+				after('<div class=\'caption\'>' + imgtitle + '</div>').
+				removeAttr('title');
+											
+			}					
+		}
+					
+	$('.wrapper').hover(
+		function(){
+			$(this).find('img').animate({opacity: ".6"}, 300);		
+			$(this).find('.caption').animate({top:"-100px"}, 300);			
+		}, 
+		function(){
+			$(this).find('img').animate({opacity: "1.0"}, 300);					
+			$(this).find('.caption').animate({top:"100px"}, 100);
+		}		
+		);			
+	});
+
+	<!--for-pop-ups-->
+
+	function deselect(e) {
+  $('.pop').slideFadeToggle(function() {
+    e.removeClass('selected');
+  });    
+}
+
+$(function() {
+  $('#contact').on('click', function() {
+    if($(this).hasClass('selected')) {
+      deselect($(this));               
+    } else {
+      $(this).addClass('selected');
+      $('.pop').slideFadeToggle();
+    }
+    return false;
+  });
+
+  $('.close').on('click', function() {
+    deselect($('#contact'));
+    return false;
+  });
+});
+
+$.fn.slideFadeToggle = function(easing, callback) {
+  return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
+};
+
+
+</script>
+</body>
+</html>
