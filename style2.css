@@ -1,0 +1,205 @@
+body {
+	background-color: #feeaff;
+}
+#main {
+	background-color: white;
+	width:790px; 
+	border:2px solid #CCCCCC; 
+	overflow:hidden; 
+	margin:0 auto; 
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px; 
+	margin-top:30px; 
+}
+
+ul {padding:0; margin:0 auto;}
+
+ul li {
+	display: inline-block;	
+	text-align: center;
+	list-style:none; 
+	padding:10px; 
+	margin:10px; 
+	line-height:10px; 
+	width:218px; 
+	height:218px; 
+	overflow:hidden; 
+	border:1px solid black;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px; 
+	background:black;
+}
+/*dynamically added*/
+div.wrapper{
+	width:218px; 
+	height:218px; 
+	overflow:hidden; 
+	position:relative;  
+}
+
+/*generic style for all div */
+div.caption {
+	font-family:'Reenie Beanie',arial; 
+	font-weight:bold; font-size:34px; 
+	letter-spacing:-2px; 
+	position:relative; 
+	text-align:center; 
+	padding:55px 15px 15px 15px; 
+	background:url(images/caption-bg.png) repeat-x; min-height:125px; 
+	text-transform:capitalize; 
+	line-height:16px;
+}
+
+/*begin fades*/
+ul li:nth-child(1) div.caption {
+	font-family: 'Delius Unicase', arial; 
+       text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+    font-weight:700; 
+	font-size:24px; 
+	position:relative; 
+	text-align:center; 
+	padding:25px 15px 15px 15px; 
+	background:url(images/hearts.png) repeat-x;
+	background-size: 100%; 
+	min-height:25px; 
+	color: white; 
+	line-height:30px;
+}
+
+ul li:nth-child(2) div.caption {font-family: 'Delius Unicase', arial; font-weight:bold; font-size:24px; position:relative; text-align:center; padding:25px 0px 15px 0px; background:url(images/pinkHearts.png); min-height:125px; color:#fff; text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000; line-height:30px;}
+
+ 
+ul li:nth-child(3) div.caption {font-family: 'Delius Unicase', arial; font-weight:bold; font-size:24px; font-style:italic; position:relative; text-align:center; padding:25px 0px 15px 0px; background:url(images/lipsPink.png); min-height:125px; color:#fff; text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000; line-height:30px;}
+
+ 
+ul li:nth-child(4) div.caption {font-family:'Delius Unicase', arial; font-weight:bold; font-size:24px; position:relative; text-align:center; padding:25px 0px 15px 0px; background:url(images/redHearts.png) repeat-x; min-height:125px; color:#fff; text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000; line-height:30px;}
+
+
+ul li:nth-child(5) div.caption {font-family:'Delius Unicase', arial; font-weight:bold; font-size:24px; position:relative; text-align:center; padding:25px 0px 15px 0px; background:url(images/lipsRed.png) repeat-x; min-height:125px; color:#fff; text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000; line-height:30px;}
+
+ul li:nth-child(6) div.caption {font-family:'Delius Unicase', arial; font-weight:bold; font-size:24px; position:relative; text-align:center; padding:25px 0px 15px 0px; background:url(images/heartsR.png); min-height:125px; color:#fff; text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000; line-height:30px; letter-spacing:-2px;}
+
+/*begins my copy and pasted code from class file*/
+img {
+	height: 250px; 
+	width: 250px;
+	border-radius: 50%;
+}
+
+.bg {
+    height: 100%;
+    width: 100%;
+	overflow: scroll;
+    background: -webkit-radial-gradient(#999 15%, #ccc 25%, pink 99%); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(#fff 15%, pink 25%, black 99%); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(#fff 15%, pink 25%, black 99%); /* For Firefox 3.6 to 15 */
+    background: radial-gradient (#fff 15%, pink 25%, black 99%); /* Standard syntax (must be last) */
+}
+.topRow {
+	padding: 10px 100px 0px 100px;
+}
+
+.moreSpace {
+margin-top: 30px;
+}
+
+.moreSideSpace {
+	margin: 0px 5px 0px 0px;
+}
+.row2 {
+	display: inline-block;
+	padding: 10px 120px 0px 120px;
+}
+
+.titles {
+	font-family: 'Delius Unicase', Arial black;
+	font-weight: 700;
+	text-align: center;
+	vertical-align: text-bottom;
+	font-size: 48px;
+	text-shadow: 5px 5px #ffadf0;
+}
+
+.titlesSmall {
+	font-family: 'League Script', Arial;
+	font-weight: 700;
+	text-align: center;
+	vertical-align: text-bottom;
+	font-size: 22px;
+	padding: 0px 20px 0px 20px;
+	text-shadow: 2px 2px #feeaff;
+}
+
+.Bk {
+color: black;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.headerButtons {
+	vertical-align: text-bottom;
+	margin-top: 30px;
+	text-align: right;
+}
+
+.selected {
+  z-index:100;
+}
+
+.messagepop {
+  background-color:#FFFFFF;
+  border:1px solid #999999;
+  cursor:default;
+  display:none;
+  margin-top: 15px;
+  position:absolute;
+  text-align:left;
+  width:200px;
+  z-index:50;
+  padding: 25px 25px 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 3px;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+
+.messagepop p, .messagepop.div {
+  border: 0px;
+  margin: 8px 0;
+  padding-bottom: 8px;
+}
