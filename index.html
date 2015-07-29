@@ -18,11 +18,22 @@
 <h1 class="titles">Bacon Donut Shop</h1>
 <p class="titlesSmall Bk">I am editing this persons file to see if I can add hover animations to the bacon donut images.</p>
 
+<div>
+		<div class="messagepop pop">
+    <h1 id="new_message">
+        ABOUT THIS DONUT</h1>
+        <p>Message message message about the donut. More more more more info about the big 'ol bacon donut. Weeee!</p>
+    <a class="close" href="/"><p>Cancel</p></a>
+</div>
+
+<div id="contact">[INSERT DONUT IMAGE]</div>
+</div>
+
 <p class="titlesSmall Bk">Bacon ipsum dolor amet ground round flank pork belly shoulder sausage drumstick turducken alcatra. Yum.</p>
 
 <p class="titlesSmall Bk">So what I need to do, I think, is take the donut pictures out of the ul and li tags and put them in a divs with IDs and rework the CSS in order to make the JavaScript work. I also think it will make it easier for me to make the site responsive.</p>
 
-<p class="titlesSmall Bk"><strong>I better get a bacon donut when I'm done with all this work!!!!</strong></p>
+<p class="titlesSmall Bk">I better get a bacon donut when I'm done with all this work!!!!</p>
 
 <ul>
 <li><img src="images/TEST.jpg" title="MMM A DONUT!" /></li>
@@ -34,18 +45,13 @@
 <li><img src="images/TEST.jpg" title="Gimme More" /></li>
 </ul>
 
+
+
+</div>
+
+
 <!--pop-ups-->
 
-<div class="messagepop pop">
-    <h1 id="new_message">
-        ABOUT THIS DONUT</h1>
-        <p>Message message message about the donut. More more more more info about the big 'ol bacon donut. Weeee!</p>
-    <a class="close" href="/"><p>Cancel</p></a>
-</div>
-
-<div id="contact">[INSERT DONUT IMAGE]</div>
-
-</div>
 
 <!--script-->
 
@@ -78,7 +84,7 @@
 		);			
 	});
 
-	<!--for-pop-ups-->
+	<!--popups-->
 
 	function deselect(e) {
   $('.pop').slideFadeToggle(function() {
@@ -106,6 +112,9 @@ $(function() {
 $.fn.slideFadeToggle = function(easing, callback) {
   return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
 };
+
+
+	
 
 
 </script>
